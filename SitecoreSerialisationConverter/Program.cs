@@ -136,35 +136,25 @@ namespace SitecoreSerialisationConverter
 
         private static void RenderItem(SitecoreDb database, SerializationModuleConfiguration newConfigModule, ref bool ignoreSyncChildren, ref bool ignoreDirectSyncChildren, string includePath, ItemDeploymentType deploymentType, ChildSynchronizationType childSynchronisation)
         {
-            if (childSynchronisation == ChildSynchronizationType.NoChildSynchronization)
+            switch (childSynchronisation)
             {
-                var path = SafePath.Get(includePath);
-
-                if (database == SitecoreDb.master)
+                case ChildSynchronizationType.NoChildSynchronization:
                 {
-                    var matchedMasterPaths = GetIgnoredRoutes.Master(Settings).Where(x => Regex.IsMatch(x, path, RegexOptions.IgnoreCase));
+                    var path = SafePath.Get(includePath);
 
-                    if (!matchedMasterPaths.Any())
+                    if (!IsIgnoredRoute(database, path))
                     {
                         AddItem(database, newConfigModule, includePath, deploymentType, childSynchronisation);
                     }
+
+                    break;
                 }
-                else if (database == SitecoreDb.core)
-                {
-                    var matchedCorePaths = GetIgnoredRoutes.Core(Settings).Where(x => Regex.IsMatch(x, path, RegexOptions.IgnoreCase));
+                case ChildSynchronizationType.KeepAllChildrenSynchronized when !ignoreSyncChildren:
+                    ignoreSyncChildren = true;
 
-                    if (!matchedCorePaths.Any())
-                    {
-                        AddItem(database, newConfigModule, includePath, deploymentType, childSynchronisation);
-                    }
-                }
-            }
+                    AddItem(database, newConfigModule, includePath, deploymentType, childSynchronisation);
+                    break;
 
-            if (childSynchronisation == ChildSynchronizationType.KeepAllChildrenSynchronized && !ignoreSyncChildren)
-            {
-                ignoreSyncChildren = true;
-
-                AddItem(database, newConfigModule, includePath, deploymentType, childSynchronisation);
             }
 
             if (childSynchronisation != ChildSynchronizationType.KeepAllChildrenSynchronized)
@@ -183,6 +173,27 @@ namespace SitecoreSerialisationConverter
             {
                 ignoreDirectSyncChildren = false;
             }
+        }
+
+        private static bool IsIgnoredRoute(SitecoreDb database, string path)
+        {
+            IEnumerable<string> ignoredPaths;
+            switch (database)
+            {
+                case SitecoreDb.core:
+                    ignoredPaths = Settings.IgnoredRoutes.Core.Where(x => Regex.IsMatch(x, path, RegexOptions.IgnoreCase));
+                    break;
+
+                case SitecoreDb.master:
+                    ignoredPaths = Settings.IgnoredRoutes.Master.Where(x => Regex.IsMatch(x, path, RegexOptions.IgnoreCase));
+                    break;
+
+                default:
+                    ignoredPaths = new List<string>();
+                    break;
+            }
+
+            return ignoredPaths.Any();
         }
 
         public static void AddItem(SitecoreDb database, SerializationModuleConfiguration newConfigModule, string includePath, ItemDeploymentType deploymentType, ChildSynchronizationType childSynchronisation)
