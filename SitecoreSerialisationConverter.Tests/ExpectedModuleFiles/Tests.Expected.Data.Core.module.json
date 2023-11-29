@@ -1,0 +1,45 @@
+{
+  "items": {
+    "includes": [
+      {
+        "name": "sitecore-content-Applications",
+        "database": "core",
+        "path": "/sitecore/content/Applications",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-content-Applications-WebEdit",
+        "database": "core",
+        "path": "/sitecore/content/Applications/WebEdit",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-content-Applications-WebEdit-Custom-Experience-Buttons",
+        "database": "core",
+        "path": "/sitecore/content/Applications/WebEdit/Custom Experience Buttons",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-content-Applications-WebEdit-Edit-Frame-Buttons",
+        "database": "core",
+        "path": "/sitecore/content/Applications/WebEdit/Edit Frame Buttons",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      }
+    ],
+    "excludedFields": []
+  },
+  "roles": [],
+  "tags": [],
+  "$schema": "./.sitecore/schemas/ModuleConfiguration.schema.json",
+  "namespace": "Tests.Data.Core",
+  "description": "XYZInc basic tds",
+  "references": []
+}
