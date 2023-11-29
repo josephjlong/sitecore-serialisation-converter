@@ -2,24 +2,22 @@
 
 namespace SitecoreSerialisationConverter.Commands
 {
+    using System;
+    using Models;
+
     public static class PushOperation
     {
-        public static AllowedPushOperations Get(string deploymentType)
+        public static AllowedPushOperations Get(ItemDeploymentType deploymentType)
         {
-            if (!string.IsNullOrEmpty(deploymentType))
+            switch (deploymentType)
             {
-                switch (deploymentType)
-                {
-                    case "AlwaysUpdate":
-                        return AllowedPushOperations.CreateUpdateAndDelete;
-                    case "DeployOnce":
-                        return AllowedPushOperations.CreateOnly;
-                    default:
-                        return AllowedPushOperations.CreateOnly;
-                }
+                case ItemDeploymentType.AlwaysUpdate:
+                    return AllowedPushOperations.CreateUpdateAndDelete;
+                case ItemDeploymentType.NeverDeploy:
+                case ItemDeploymentType.DeployOnce:
+                default:
+                    return AllowedPushOperations.CreateOnly;
             }
-
-            return AllowedPushOperations.CreateAndUpdate;
         }
     }
 }

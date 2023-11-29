@@ -1,20 +1,15 @@
-using System.Reflection;
-
 namespace SitecoreSerialisationConverter.Tests
 {
+    using System.Reflection;
     using FluentAssertions.Json;
     using Newtonsoft.Json;
     using Newtonsoft.Json.Linq;
 
+    [TestFixture]
     public class ApprovalTest
     {
-        [SetUp]
-        public void Setup()
-        {
-        }
-
         [Test]
-        public void AddItem()
+        public void GoldenMasters()
         {
             var execPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
