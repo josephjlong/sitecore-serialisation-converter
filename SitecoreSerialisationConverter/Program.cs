@@ -20,12 +20,12 @@ using SitecoreSerialisationConverter.Models;
 
 namespace SitecoreSerialisationConverter
 {
-    class Program
+    public class Program
     {
         public static Settings Settings;
         public static List<AliasItem> AliasList;
 
-        static void Main(string[] args)
+        public static void Main(string[] args)
         {
             IConfiguration config = new ConfigurationBuilder()
                 .AddJsonFile("appsettings.json")

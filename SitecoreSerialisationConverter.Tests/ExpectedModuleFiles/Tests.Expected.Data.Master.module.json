@@ -1,0 +1,213 @@
+{
+  "items": {
+    "includes": [
+      {
+        "name": "sitecore-layout-Layouts-XYZInc",
+        "database": "master",
+        "path": "/sitecore/layout/Layouts/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-layout-Placeholder-Settings",
+        "database": "master",
+        "path": "/sitecore/layout/Placeholder Settings",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-layout-Placeholder-Settings-XYZInc",
+        "database": "master",
+        "path": "/sitecore/layout/Placeholder Settings/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-layout-Renderings",
+        "database": "master",
+        "path": "/sitecore/layout/Renderings",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-layout-Renderings-XYZInc",
+        "database": "master",
+        "path": "/sitecore/layout/Renderings/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-media-library",
+        "database": "master",
+        "path": "/sitecore/media library",
+        "scope": "singleItem",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "rules": []
+      },
+      {
+        "name": "sitecore-media-library-Images",
+        "database": "master",
+        "path": "/sitecore/media library/Images",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-media-library-Images-XYZInc",
+        "database": "master",
+        "path": "/sitecore/media library/Images/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system",
+        "database": "master",
+        "path": "/sitecore/system",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-XYZInc",
+        "database": "master",
+        "path": "/sitecore/system/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-XYZInc-My-Super-Draw",
+        "database": "master",
+        "path": "/sitecore/system/XYZInc/My Super Draw",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-XYZInc-My-Super-Draw-My-Super-Draw-Settings",
+        "database": "master",
+        "path": "/sitecore/system/XYZInc/My Super Draw/My Super Draw Settings",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-Settings",
+        "database": "master",
+        "path": "/sitecore/system/Settings",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-Settings-Validation-Rules",
+        "database": "master",
+        "path": "/sitecore/system/Settings/Validation Rules",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-Settings-Validation-Rules-Field-Rules",
+        "database": "master",
+        "path": "/sitecore/system/Settings/Validation Rules/Field Rules",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-Settings-Validation-Rules-Field-Rules-XYZInc",
+        "database": "master",
+        "path": "/sitecore/system/Settings/Validation Rules/Field Rules/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-Settings-Validation-Rules-Field-Rules-XYZInc-My-Super-Draw",
+        "database": "master",
+        "path": "/sitecore/system/Settings/Validation Rules/Field Rules/XYZInc/My Super Draw",
+        "scope": "itemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-Workflows",
+        "database": "master",
+        "path": "/sitecore/system/Workflows",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-system-Workflows-My-Super-Draw-Workflow",
+        "database": "master",
+        "path": "/sitecore/system/Workflows/My Super Draw Workflow",
+        "scope": "itemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "rules": []
+      },
+      {
+        "name": "sitecore-templates",
+        "database": "master",
+        "path": "/sitecore/templates",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-templates-XYZInc",
+        "database": "master",
+        "path": "/sitecore/templates/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-templates-XYZInc-My-Super-Draw",
+        "database": "master",
+        "path": "/sitecore/templates/XYZInc/My Super Draw",
+        "scope": "itemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "rules": []
+      },
+      {
+        "name": "sitecore-templates-Branches",
+        "database": "master",
+        "path": "/sitecore/templates/Branches",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-templates-Branches-XYZInc",
+        "database": "master",
+        "path": "/sitecore/templates/Branches/XYZInc",
+        "scope": "singleItem",
+        "allowedPushOperations": "createOnly",
+        "rules": []
+      },
+      {
+        "name": "sitecore-templates-Branches-XYZInc-My-Super-Draw",
+        "database": "master",
+        "path": "/sitecore/templates/Branches/XYZInc/My Super Draw",
+        "scope": "itemAndDescendants",
+        "allowedPushOperations": "createUpdateAndDelete",
+        "rules": []
+      }
+    ],
+    "excludedFields": []
+  },
+  "roles": [],
+  "tags": [],
+  "$schema": "./.sitecore/schemas/ModuleConfiguration.schema.json",
+  "namespace": "Tests.Data.Master",
+  "description": "XYZInc basic tds",
+  "references": []
+}
