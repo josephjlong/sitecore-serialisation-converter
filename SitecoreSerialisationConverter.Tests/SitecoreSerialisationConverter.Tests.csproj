@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -22,7 +22,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="appSettings.json">
+    <None Update="appSettings.Master.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="appSettings.Core.json">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
     <None Update="ExpectedModuleFiles\Tests.Expected.Data.Core.module.json">
@@ -34,10 +37,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Include="ApprovalTestSrc\Test.Data.Master.scproj">
+    <None Include="ApprovalTestSrc\Master\Test.Data.Master.scproj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Include="ApprovalTestSrc\Test.Data.Core.scproj">
+    <None Include="ApprovalTestSrc\Core\Test.Data.Core.scproj">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

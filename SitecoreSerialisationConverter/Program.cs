@@ -28,8 +28,14 @@ namespace SitecoreSerialisationConverter
 
         public static void Main(string[] args)
         {
+            var appSettingsJson = "appsettings.json";
+            if (args.Length > 0 && !string.IsNullOrWhiteSpace(args[0]))
+            {
+                appSettingsJson = args[0];
+            }
+
             IConfiguration config = new ConfigurationBuilder()
-                .AddJsonFile("appsettings.json")
+                .AddJsonFile(appSettingsJson)
                 .AddEnvironmentVariables()
                 .Build();
 
