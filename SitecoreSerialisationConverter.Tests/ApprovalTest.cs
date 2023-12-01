@@ -14,8 +14,8 @@ namespace SitecoreSerialisationConverter.Tests
             var execPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             var expectedCoreJson = JToken.Load(new JsonTextReader(new StreamReader(execPath + "\\ExpectedModuleFiles\\Tests.Expected.Data.Core.module.json")));
-
-            Program.Main(new string[] { "appSettings.Core.json" });
+            Program.AppSettingsJsonFile = "appSettings.Core.json";
+            Program.Main(new string[] {  });
 
             var actualCoreJson = JToken.Load(new JsonTextReader(new StreamReader(execPath + "\\ApprovalTestConverted\\Tests.Data.Core.module.json")));
 
@@ -28,8 +28,8 @@ namespace SitecoreSerialisationConverter.Tests
             var execPath = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
 
             var expectedMasterJson = JToken.Load(new JsonTextReader(new StreamReader(execPath + "\\ExpectedModuleFiles\\Tests.Expected.Data.Master.module.json")));
-
-            Program.Main(new string[] { "appSettings.Master.json" });
+            Program.AppSettingsJsonFile = "appSettings.Master.json";
+            Program.Main(new string[] { });
 
             var actualMasterJson = JToken.Load(new JsonTextReader(new StreamReader(execPath + "\\ApprovalTestConverted\\Tests.Data.Master.module.json")));
 

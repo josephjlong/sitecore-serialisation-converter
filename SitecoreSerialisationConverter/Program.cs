@@ -23,19 +23,14 @@ namespace SitecoreSerialisationConverter
 
     public class Program
     {
+        public static string AppSettingsJsonFile = "appsettings.json";
         public static Settings Settings;
         public static List<AliasItem> AliasList;
 
         public static void Main(string[] args)
         {
-            var appSettingsJson = "appsettings.json";
-            if (args.Length > 0 && !string.IsNullOrWhiteSpace(args[0]))
-            {
-                appSettingsJson = args[0];
-            }
-
             IConfiguration config = new ConfigurationBuilder()
-                .AddJsonFile(appSettingsJson)
+                .AddJsonFile(AppSettingsJsonFile)
                 .AddEnvironmentVariables()
                 .Build();
 
